@@ -6,6 +6,7 @@ services:
       dockerfile: ./dev.Dockerfile
     volumes:
       - ./frontend/:/usr/src/app
+      - /usr/src/app/node_modules
     ports:
       - 3000:3000
     environment:
@@ -18,8 +19,17 @@ services:
       dockerfile: ./dev.Dockerfile
     volumes:
       - ./backend/:/usr/src/app
+      - /usr/src/app/node_modules
     ports:
       - 3001:3001
     environment:
       - PORT=3001
     container_name: backend
+  nginx:  
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: reverse-proxy
+    
