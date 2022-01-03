@@ -1,8 +1,8 @@
 import axios from "axios";
 import { BackendResponse } from "../typescript/types";
-const uri = process.env.CROSS_ENV === "production"
-    ? "https://rps-results-2021.herokuapp.com/api/history"
-    : "http://localhost:3001/api/history";
+const uri = process.env.CROSS_ENV === "dev"
+    ? "http://localhost:3001/api/history"
+    : "https://rps-results-2022.herokuapp.com/api/history";
 // This file contains all the functions that make requests to the backend.
 // FetchHistory fetches history for the first time from the backend. It has no parameters such as cursor.
 export const fetchHistory = async (): Promise<BackendResponse> => {
