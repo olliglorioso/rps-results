@@ -1,0 +1,41 @@
+{
+  "name": "rps-results",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:backend": "rm -rf index.js && rm -rf src && cd backend && npm run tsc && cp -r ./build/src .. && cp -r ./build/index.js .. && rm -rf build",
+    "build:frontend": "rm -rf build && cd frontend && rm -rf build && npm run build && cp -r build ..",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olliglorioso/rps-results.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olliglorioso/rps-results/issues"
+  },
+  "homepage": "https://github.com/olliglorioso/rps-results#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.17",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.0",
+    "typescript": "^4.5.4",
+    "web-vitals": "^2.1.2",
+    "ws": "^8.4.0",
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.2"
+  }
+}
