@@ -3,7 +3,7 @@ An app that shows live results of rock-paper-scissors games and the history of e
 
 ## Explore
 Production: https://rps-results-2022.herokuapp.com/ \
-Development (2 ways):\
+Development (2 ways): \
 
 1. If you have Docker and docker-compose installed, just run \
 ``docker-compose -f docker-compose.dev.yml``\
