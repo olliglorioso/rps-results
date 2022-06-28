@@ -1,9 +1,6 @@
 import React from "react";
 
-// A small component that renders an emoji which is wanted.
 const Emoji = ({ symbol }: {symbol: string}): JSX.Element => {
-    // Based on the props.symbol, one of the three "available" emojis is returned. If the symbol
-    // includes a ",", it is split and several emojis are returned.
 
     if (symbol.includes(",")) {
         return (

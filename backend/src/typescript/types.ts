@@ -1,5 +1,3 @@
-// This file includes all the types used in the backend.
-
 interface Player {
     name: string;
     played: string;
